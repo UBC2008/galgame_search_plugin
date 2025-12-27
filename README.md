@@ -1,7 +1,7 @@
 # Galgame 搜索插件 (Galgame Search Plugin)
 
 一个适用于 MaiBot 的 Galgame 搜索插件，集成 TouchGal 和 ShionLib 两大资源库，帮助你快速找到心仪的游戏资源。
-## ！使用须知
+## ！重要提示
 
 - **本插件由ai完成**
 - **在QQ群内发送gal网站链接有封号风险，请在信任环境启用**
@@ -79,6 +79,7 @@ max_keywords = 5
 ## ⚖ 许可证
 
 MIT License
+
 
 
 
