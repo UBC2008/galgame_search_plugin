@@ -1,0 +1,25 @@
+{
+    "manifest_version": 1,
+    "name": "Galgame 搜索插件",
+    "version": "1.0.0",
+    "description": "帮助用户从 TouchGal 和 ShionLib 网站搜索 Galgame 游戏资源，支持 /gal 命令、自然语言查询，支持用llm扩展搜索关键词",
+    "author": {
+        "name": "霜印",
+        "url": "https://github.com/UBC2008?tab=repositories"
+    },
+    "host_application": {
+        "min_version": "0.10.0"
+    },
+    "keywords": [
+        "galgame",
+        "search",
+        "二次元",
+        "搜索"
+    ],
+    "categories": [
+        "Utility",
+        "Entertainment"
+    ],
+    "default_locale": "zh-CN",
+    "license": "MIT"
+}
