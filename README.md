@@ -47,7 +47,7 @@
 ```toml
 [plugin]
 # 是否启用插件
-enabled = True
+enabled = true
 
 [search]
 # 搜索结果最大数量
@@ -73,11 +73,12 @@ max_keywords = 5
 ## 🛠️ 数据来源
 
 本插件搜索结果来自以下网站，仅做数据聚合：
-- [TouchGal](https://www.touchgal.us/) - 可能是最好的 Galgame 资源站
-- [ShionLib](https://shionlib.com/) - 视觉小说/Galgame 档案库
+- [TouchGal](https://www.touchgal.us/)
+- [ShionLib](https://shionlib.com/)
 
 ## ⚖ 许可证
 
 MIT License
+
 
 
