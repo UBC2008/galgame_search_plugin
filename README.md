@@ -13,7 +13,7 @@
 - **关键词扩展**：利用 LLM 自动扩展搜索关键词，提高搜索命中率。
 - **命令模式**：提供 `/gal` 快捷命令。
 
-## � 安装方法
+## 🖥️ 安装方法
 
 1. 将 `galgame_search` 文件夹移动到 MaiBot 的 `plugins` 目录下。
 2. 重启 MaiBot。
@@ -76,7 +76,8 @@ max_keywords = 5
 - [TouchGal](https://www.touchgal.us/) - 可能是最好的 Galgame 资源站
 - [ShionLib](https://shionlib.com/) - 视觉小说/Galgame 档案库
 
-## � 许可证
+## ⚖ 许可证
 
 MIT License
+
 
