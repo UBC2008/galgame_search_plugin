@@ -21,5 +21,6 @@
         "Entertainment"
     ],
     "default_locale": "zh-CN",
-    "license": "MIT"
+    "license": "MIT",
+    "repository_url": "https://github.com/UBC2008/galgame_search_plugin"
 }
