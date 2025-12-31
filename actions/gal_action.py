@@ -31,7 +31,7 @@ class GalSearchAction(BaseAction):
     action_description = (
         "搜索 Galgame（美少女游戏/视觉小说）的下载资源。"
         "当用户询问游戏资源、下载链接、或提到具体游戏名称时触发。"
-        "数据来源：TouchGal (https://www.touchgal.us/)，一般不需要挂梯"
+        "数据来源：TouchGal (https://www.touchgal.top/)，一般不需要挂梯"
     )
     
     # 关键词设置（用于 Normal 模式快速响应）
@@ -214,3 +214,4 @@ class GalSearchAction(BaseAction):
         except Exception as e:
             await self.send_text(f"搜索出错：{str(e)}")
             return False, f"搜索失败: {str(e)}"
+
