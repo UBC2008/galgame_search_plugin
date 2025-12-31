@@ -13,7 +13,7 @@ from urllib.parse import quote
 # ========== 网站配置 ==========
 
 # TouchGal 配置
-TOUCHGAL_BASE_URL = "https://www.touchgal.us"
+TOUCHGAL_BASE_URL = "https://www.touchgal.top"
 TOUCHGAL_SEARCH_API = f"{TOUCHGAL_BASE_URL}/api/search"
 
 # ShionLib 配置
@@ -23,7 +23,7 @@ SHIONLIB_SEARCH_URL = f"{SHIONLIB_BASE_URL}/zh/search/game"
 # 默认请求头
 DEFAULT_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept": "application/json",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 }
 
@@ -82,22 +82,25 @@ async def search_touchgal(
     results = []
     
     try:
-        query_string_json = f'[{{"type":"keyword","name":"{game_name}"}}]'
+        # 构建符合 API 要求的 queryString 结构
+        import json
+        query_data = [{"type": "keyword", "name": game_name}]
+        query_string = json.dumps(query_data, separators=(',', ':'))
         
         payload = {
-            "queryString": query_string_json,
+            "queryString": query_string,
             "limit": max_results,
+            "page": 1,
+            "sortOrder": "desc",
+            "sortField": "resource_update_time",
             "searchOption": {
                 "searchInIntroduction": False,
                 "searchInAlias": True,
                 "searchInTag": False
             },
-            "page": 1,
             "selectedType": "all",
             "selectedLanguage": "all",
             "selectedPlatform": "all",
-            "sortField": "resource_update_time",
-            "sortOrder": "desc",
             "selectedYears": ["all"],
             "selectedMonths": ["all"]
         }
@@ -106,7 +109,11 @@ async def search_touchgal(
             async with session.post(
                 TOUCHGAL_SEARCH_API,
                 json=payload,
-                headers={**DEFAULT_HEADERS, "Referer": TOUCHGAL_BASE_URL},
+                headers={
+                    **DEFAULT_HEADERS, 
+                    "Referer": f"{TOUCHGAL_BASE_URL}/search",
+                    "Origin": TOUCHGAL_BASE_URL
+                },
                 timeout=aiohttp.ClientTimeout(total=timeout)
             ) as response:
                 if response.status != 200:
