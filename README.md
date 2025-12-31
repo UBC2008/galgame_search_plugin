@@ -7,7 +7,7 @@
 
 ## ✨ 功能特性
 
-- **多源搜索**：整合 [TouchGal](https://www.touchgal.us/)  和 [ShionLib](https://shionlib.com/)  搜索结果。
+- **多源搜索**：整合 [TouchGal](https://www.touchgal.top/)  和 [ShionLib](https://shionlib.com/)  搜索结果。
 - **智能识别**：支持自然语言询问（如："有没有白色相簿2的资源"），无需死记命令。
 - **关键词扩展**：利用 LLM 自动扩展搜索关键词，提高搜索命中率。
 - **命令模式**：提供 `/gal` 快捷命令。
@@ -72,12 +72,13 @@ max_keywords = 5
 ## 🛠️ 数据来源
 
 本插件搜索结果来自以下网站，仅做数据聚合：
-- [TouchGal](https://www.touchgal.us/)
+- [TouchGal](https://www.touchgal.top/)
 - [ShionLib](https://shionlib.com/)
 
 ## ⚖ 许可证
 
 MIT License
+
 
 
 
