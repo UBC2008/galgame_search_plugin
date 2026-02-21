@@ -21,7 +21,7 @@ class GalSearchAction(BaseAction):
     
     # 激活设置
     activation_type = ActionActivationType.KEYWORD  # 默认使用关键词激活
-    focus_activation_type = ActionActivationType.KEYWORD
+    focus_activation_type = ActionActivationType.ALWAYS
     normal_activation_type = ActionActivationType.KEYWORD  # Normal模式使用关键词激活
     mode_enable = ChatMode.ALL
     parallel_action = False
@@ -214,5 +214,6 @@ class GalSearchAction(BaseAction):
         except Exception as e:
             await self.send_text(f"搜索出错：{str(e)}")
             return False, f"搜索失败: {str(e)}"
+
 
 
