@@ -1,7 +1,7 @@
 {
     "manifest_version": 1,
     "name": "Galgame 搜索插件",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "帮助用户从 TouchGal 和 ShionLib 网站搜索 Galgame 游戏资源，支持 /gal 命令、自然语言查询，支持用llm扩展搜索关键词",
     "author": {
         "name": "霜印",
@@ -24,3 +24,4 @@
     "license": "MIT",
     "repository_url": "https://github.com/UBC2008/galgame_search_plugin"
 }
+
